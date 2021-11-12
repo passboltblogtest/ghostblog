@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Understanding How Open Source Projects Work</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+
+    <link rel="stylesheet" href="/assets/built/screen.css?v=055dbea058">
+
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="canonical" href="/understanding-how-open-source-projects-workbreaking-down-the-anatomy-of-open-source-projects-is-the-first-step-to-getting-involved-and-contributing-to-your-favorite-software/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="/understanding-how-open-source-projects-workbreaking-down-the-anatomy-of-open-source-projects-is-the-first-step-to-getting-involved-and-contributing-to-your-favorite-software/amp/" />
+    
+    <meta property="og:site_name" content="Passbolt Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Understanding How Open Source Projects Work" />
+    <meta property="og:description" content="Breaking down the anatomy of open source projects is the first step to getting involved and contributing to your favorite software.In a survey conducted with nearly 150 passbolt users, we discovered that a majority of those stated that they do not contribute to open source projects was because they" />
+    <meta property="og:url" content="/understanding-how-open-source-projects-workbreaking-down-the-anatomy-of-open-source-projects-is-the-first-step-to-getting-involved-and-contributing-to-your-favorite-software/" />
+    <meta property="og:image" content="/content/images/2021/11/Passbolt_Understand-open-source-projects.png" />
+    <meta property="article:published_time" content="2021-11-12T11:20:41.000Z" />
+    <meta property="article:modified_time" content="2021-11-12T11:22:10.000Z" />
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Understanding How Open Source Projects Work" />
+    <meta name="twitter:description" content="Breaking down the anatomy of open source projects is the first step to getting involved and contributing to your favorite software.In a survey conducted with nearly 150 passbolt users, we discovered that a majority of those stated that they do not contribute to open source projects was because they" />
+    <meta name="twitter:url" content="/understanding-how-open-source-projects-workbreaking-down-the-anatomy-of-open-source-projects-is-the-first-step-to-getting-involved-and-contributing-to-your-favorite-software/" />
+    <meta name="twitter:image" content="/content/images/2021/11/Passbolt_Understand-open-source-projects.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Julie Savary" />
+    <meta name="twitter:site" content="@ghost" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="1000" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Passbolt Blog",
+        "url": "/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/content/images/2021/11/Passbolt-white.svg"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Julie Savary",
+        "url": "/author/julie/",
+        "sameAs": []
+    },
+    "headline": "Understanding How Open Source Projects Work",
+    "url": "/understanding-how-open-source-projects-workbreaking-down-the-anatomy-of-open-source-projects-is-the-first-step-to-getting-involved-and-contributing-to-your-favorite-software/",
+    "datePublished": "2021-11-12T11:20:41.000Z",
+    "dateModified": "2021-11-12T11:22:10.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "/content/images/2021/11/Passbolt_Understand-open-source-projects.png",
+        "width": 2000,
+        "height": 1000
+    },
+    "description": "Breaking down the anatomy of open source projects is the first step to getting\ninvolved and contributing to your favorite software.\n\n--------------------------------------------------------------------------------\n\nIn a survey conducted with nearly 150 passbolt users, we discovered that a\nmajority of those stated that they do not contribute to open source projects was\nbecause they don’t:\n\n * know where to start 15%\n * have the necessary skills 50%\n * have the time 28.75%\n\nWe’ve already addressed",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Sitesauce" />
+    <link rel="alternate" type="application/rss+xml" title="Passbolt Blog" href="/rss/" />
+    <script defer src="https://unpkg.com/@tryghost/portal@~1.12.0/umd/portal.min.js" data-ghost="/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style><style>:root {--ghost-accent-color: #000000;}</style>
+</head>
+
+<body class="post-template with-alt-header">
+    <div class="site">
+        <header id="site-header" class="site-header">
+    <div class="header-inner">
+        <div class="header-brand">
+            <a class="logo" href="">
+                    <img class="logo-image" src="/content/images/2021/11/Passbolt-white.svg" alt="Passbolt Blog">
+            </a>
+
+            <div class="burger">
+                <div class="burger-bar"></div>
+                <div class="burger-bar"></div>
+            </div>
+        </div>
+
+        <nav class="header-nav">
+                        <a class="menu-item menu-item-home" href="/">Home</a>
+        <a class="menu-item menu-item-need-help" href="https://community.passbolt.com/">Need help?</a>
+        <a class="menu-item menu-item-community-forum" href="https://community.passbolt.com/">Community Forum</a>
+        <a class="menu-item menu-item-download" href="https://www.passbolt.com/ce">Download</a>
+        <a class="menu-item menu-item-sign-up" href="https://www.passbolt.com/cloud/signup">Sign up</a>
+
+        </nav>
+
+        <div class="header-actions">
+            <div class="social">
+                    <a class="social-item social-item-facebook"
+                        href="https://www.facebook.com/ghost" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook">
+                        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/></svg>                    </a>
+
+                    <a class="social-item social-item-twitter"
+                        href="https://twitter.com/ghost" target="_blank"
+                        rel="noopener noreferrer" aria-label="Twitter">
+                        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>                    </a>
+            </div>
+
+                <button class="button-text menu-item members-login" data-portal="signin">Login</button>
+        </div>
+    </div>
+</header>
+
+        <div class="site-content">
+            
+<div class="content-area">
+    <main class="site-main">
+            <article class="single post">
+    <header class="single-header kg-canvas">
+            <div class="single-meta">
+                <span class="single-meta-item single-meta-date">
+                    <time datetime="2021-11-12">
+                        Nov 12, 2021
+                    </time>
+                </span>
+
+                <span class="single-meta-item single-meta-length">
+                    4 min read
+                </span>
+
+            </div>
+
+        <h1 class="single-title">Understanding How Open Source Projects Work</h1>
+
+
+                <figure class="single-media kg-width-wide">
+                    <img srcset="/content/images/size/w400/2021/11/Passbolt_Understand-open-source-projects.png 400w,
+/content/images/size/w750/2021/11/Passbolt_Understand-open-source-projects.png 750w,
+/content/images/size/w960/2021/11/Passbolt_Understand-open-source-projects.png 960w,
+/content/images/size/w1140/2021/11/Passbolt_Understand-open-source-projects.png 1140w" sizes="(min-width: 1023px) 920px, calc(90vw)" src="/content/images/size/w960/2021/11/Passbolt_Understand-open-source-projects.png" alt="Understanding How Open Source Projects Work">
+                </figure>
+    </header>
+
+    <div class="single-content kg-canvas u-text-format">
+        <h2 id="breaking-down-the-anatomy-of-open-source-projects-is-the-first-step-to-getting-involved-and-contributing-to-your-favorite-software">Breaking down the anatomy of open source projects is the first step to getting involved and contributing to your favorite software.</h2><hr><p>In a survey conducted with nearly 150 passbolt users, we discovered that a majority of those stated that they<em><em> do not </em></em>contribute to open source projects was because they don’t:</p><ul><li>know where to start <strong><strong>15%</strong></strong></li><li>have the necessary skills <strong><strong>50%</strong></strong></li><li>have the time <strong><strong>28.75%</strong></strong></li></ul><figure class="kg-card kg-image-card"><img src="/content/images/2021/11/image.png" class="kg-image" alt loading="lazy" width="700" height="460" srcset="/content/images/size/w600/2021/11/image.png 600w, /content/images/2021/11/image.png 700w"></figure><p>We’ve already addressed the fact that you probably do have the skills needed to contribute — it’s just a common misconception that programming is the only contribution that makes a difference.</p><p>As for having the time, contributions can be big or small. Every little bit counts. You shouldn’t feel like you have to make a large contribution for it to be worthwhile. Something as simple as leaving your feedback or sharing an opinion in our forum is a valuable contribution!</p><p>What we want to focus on here is for those of you who don’t know where to start. We’ll break down the basics of open source projects to help get you going. And, hopefully, of course, inspire you to start getting involved with open source projects.</p><h2 id="the-cathedral-and-bazaar">The Cathedral and Bazaar</h2><p>Not every open source project follows the same organizational model. Some are very large and highly decentralized. The majority are quite small and centralized around a few key people.</p><p>Eric S. Raymond, in his essay/book <a href="https://en.wikipedia.org/wiki/The_Cathedral_and_the_Bazaar" rel="noopener ugc nofollow">The Cathedral and the Bazaar: Musings on Linux and Open Source by an Accidental Revolutionary</a>, contrasts 2 development models for free software; The Cathedral and The Bazaar.</p><p>According to Raymond, The Cathedral is where source code is available with a software release. The code developed between releases is only available to a restricted group of software developers.</p><p>The Bazaar model is where the code is developed over the internet publicly. Raymond credits Linus Torvalds (leader of the Linux kernel project) as the inventor of this type of free software model.</p><h2 id="anatomy-of-open-source-projects">Anatomy of open source projects</h2><p>There are a lot of people interested in open source projects — maybe you heard a friend talk about one they’re involved with. Perhaps you use open source software, like passbolt, in your daily life.</p><p>Breaking down the anatomy of open source projects is a great way to better understand what role you can play. Not everyone who codes is an open-source expert, and not all of us are developers anyways.</p><p>First things first, we need to break down the different elements of an open-source project.</p><h2 id="who%E2%80%99s-who">Who’s who?</h2><p>Typically, in an open-source project, you’ll find the following roles.</p><p><strong><strong>Original Author</strong></strong> → The person who created the project and has the power to assign new roles to other members for project maintenance. Depending on the project this person can have a lot of influence and acquire the nickname of “<a href="https://en.wikipedia.org/wiki/Benevolent_dictator_for_life" rel="noopener ugc nofollow">Benevolent dictator for life</a>”.</p><p><strong><strong>Owner</strong></strong> → Has administrative ownership of the project (can be the same person as the author). In some projects, like passbolt, a company can be the owner.</p><p><strong><strong>Maintainers </strong></strong>→ Responsible for driving the vision and goals of the project. Usually, people who feel responsible for the direction of the project and are committed to improving it.</p><p><strong><strong>Contributors</strong></strong> → Add to the project. They follow the same code review process, are subject to the same requirements on code style, etc.</p><p><strong><strong>Community Members/Users</strong></strong> → Valuable members of the community who provide feedback about features, bug reports, etc.</p><figure class="kg-card kg-image-card"><img src="/content/images/2021/11/image-1.png" class="kg-image" alt loading="lazy" width="700" height="115" srcset="/content/images/size/w600/2021/11/image-1.png 600w, /content/images/2021/11/image-1.png 700w"></figure><h2 id="what%E2%80%99s-it-all-about">What’s it all about?</h2><p>Now that you’ve got a pretty good grasp of who’s who in typical open source projects, we need to figure out what the project is about, find out about their licensing, guidelines, and any other information that will help you to take part.</p><p><strong><strong>License</strong></strong> — Open source doesn’t just mean access to the source code. All open-source projects must have an <a href="https://opensource.org/osd" rel="noopener ugc nofollow">OSI-approved</a> license! This license protects the freedom of the contributors and users.</p><p><strong><strong>Readme </strong></strong>— A manual that explains how to get started with the project. A good README will have everything a potential contributor needs to know about the project.</p><p><strong><strong>How to Contribute</strong></strong> — Guidelines that help people contribute and show what type of contributors are needed. This file isn’t mandatory, but great when a project has one.</p><p><strong><strong>Code of conduct</strong></strong> — A document that establishes the author and owner expectations for how the contributors and participants behave. Usually used to create and maintain a safe and positive environment with the community.</p><h2 id="sharing-is-caring">Sharing is caring</h2><p>Beyond creating a positive environment in an open-source community, most projects will also want to ensure that users and contributors feel comfortable enough to share, and be open about their opinions. While also making sure that contributors know how valuable their code, feedback, or any other contributions are.</p><p>Some of the tools open source projects will use to make this possible include:</p><ul><li>Issue Tracker — Where people discuss issues related to the project</li><li>Pull Requests — Where people review changes in progress</li><li>Synchronous Chat Channel — Specifically meant for people to share their ideas and have conversations (like Slack, or a forum)</li></ul><p>At passbolt, we use <a href="https://github.com/passbolt" rel="noopener ugc nofollow">Github</a> for Issue Tracking and Pull Requests. For discussions, we have our <a href="https://community.passbolt.com/" rel="noopener ugc nofollow">community forum</a>.</p><h2 id="why-contribute-to-passbolt%E2%80%99s-project">Why contribute to passbolt’s project?</h2><p>Well, we’ve determined you <em><em>must </em></em>have some skills that are valuable to passbolt’s open-source software. Plus, now you know exactly who’s who and what’s what in typical open source projects.</p><p>Your contributions help to continue the development of passbolt, and the features that users are looking for. The more features there are, and the better they are means that we can continue to grow, together.</p><p>The added bonus is getting to be a part of a wonderful community. The passbolt community is pretty tight-knit, very supportive, and we’re always welcoming new insights, ideas, and skillsets. Join in!</p>
+    </div>
+
+        <footer class="single-footer container small">
+            <div class="single-footer-left">
+                    <div class="navigation navigation-previous">
+                        <a class="navigation-link" href="/passbolt-browser-integration-just-got-an-upgrade/" aria-label="Previous post">
+                            <span class="navigation-icon"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <path d="M26.667 14.667v2.667h-16L18 24.667l-1.893 1.893L5.547 16l10.56-10.56L18 7.333l-7.333 7.333h16z"></path>
+</svg></span>
+                        </a>
+                    </div>
+            </div>
+
+            <div class="single-footer-middle">
+                    <div class="single-footer-top">
+                        <h3 class="single-footer-title">Published by:</h3>
+                        <div class="author-list">
+                                <div class="author-image-placeholder u-placeholder square">
+                                    <a href="/author/julie/" title="Julie Savary">
+                                            <span class="u-object-fit"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</span>
+                                    </a>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="single-footer-bottom">
+                        <div class="share">
+                            <a class="share-link share-link-facebook"
+                                href="https://www.facebook.com/sharer.php?u=/understanding-how-open-source-projects-workbreaking-down-the-anatomy-of-open-source-projects-is-the-first-step-to-getting-involved-and-contributing-to-your-favorite-software/"
+                                target="_blank" rel="noopener noreferrer">
+                                <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/></svg>                                Share
+                            </a>
+                            <a class="share-link share-link-twitter"
+                                href="https://twitter.com/intent/tweet?url=/understanding-how-open-source-projects-workbreaking-down-the-anatomy-of-open-source-projects-is-the-first-step-to-getting-involved-and-contributing-to-your-favorite-software/&text=Understanding%20How%20Open%20Source%20Projects%20Work"
+                                target="_blank" rel="noopener noreferrer">
+                                <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>                                Tweet
+                            </a>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="single-footer-right">
+            </div>
+        </footer>
+</article>                                </main>
+</div>
+
+
+        </div>
+
+        <footer class="site-footer container">
+    <div class="footer-inner">
+        <div class="footer-left">
+            <div class="copyright">
+                Passbolt Blog © 2021
+            </div>
+        </div>
+
+        <nav class="footer-nav">
+                    <a class="menu-item menu-item-terms" href="https://passbolt.com/terms">Terms</a>
+        <span class="sep">•</span>
+        <a class="menu-item menu-item-security" href="https://passbolt.com/security">Security</a>
+        <span class="sep">•</span>
+        <a class="menu-item menu-item-privacy" href="https://passbolt.com/privacy">Privacy</a>
+        <span class="sep">•</span>
+        <a class="menu-item menu-item-credits" href="https://passbolt.com/credits">Credits</a>
+        <span class="sep">•</span>
+
+            <a class="menu-item badge" href="https://ghost.org/" target="_blank" rel="noopener noreferrer">Published with Ghost</a>
+        </nav>
+
+        <div class="footer-right">
+            <div class="social">
+                    <a class="social-item social-item-facebook"
+                        href="https://www.facebook.com/ghost" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook">
+                        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/></svg>                    </a>
+
+                    <a class="social-item social-item-twitter"
+                        href="https://twitter.com/ghost" target="_blank"
+                        rel="noopener noreferrer" aria-label="Twitter">
+                        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>                    </a>
+            </div>
+        </div>
+    </div>
+</footer>        <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe.
+        It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides.
+          PhotoSwipe keeps only 3 of them in the DOM to save memory.
+          Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>    </div>
+
+    <script>
+        if (document.body.classList.contains('with-full-cover') && (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.platform))) {
+            document.getElementsByClassName('cover')[0].style.height = window.innerHeight + 'px';
+        }
+    </script>
+
+    <script src="/assets/built/main.min.js?v=055dbea058"></script>
+
+    
+</body>
+
+</html>

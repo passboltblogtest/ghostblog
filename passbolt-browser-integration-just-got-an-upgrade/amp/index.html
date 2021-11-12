@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html ⚡>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <title>Passbolt browser integration just got an upgrade</title>
+
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="canonical" href="/passbolt-browser-integration-just-got-an-upgrade/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="Passbolt Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Passbolt browser integration just got an upgrade" />
+    <meta property="og:description" content="Based on users feedback, it was time for passbolt to upgrade some of the browser extension integration features, primarily the auto-fill / auto-save functionalities.While browsing the internet, passbolt users aren’t always aware when credentials are known by passbolt, for a given web form. This is when you need to" />
+    <meta property="og:url" content="/passbolt-browser-integration-just-got-an-upgrade/" />
+    <meta property="og:image" content="/content/images/2021/11/Passbolt_browser-integration.png" />
+    <meta property="article:published_time" content="2021-11-12T11:04:39.000Z" />
+    <meta property="article:modified_time" content="2021-11-12T11:22:17.000Z" />
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Passbolt browser integration just got an upgrade" />
+    <meta name="twitter:description" content="Based on users feedback, it was time for passbolt to upgrade some of the browser extension integration features, primarily the auto-fill / auto-save functionalities.While browsing the internet, passbolt users aren’t always aware when credentials are known by passbolt, for a given web form. This is when you need to" />
+    <meta name="twitter:url" content="/passbolt-browser-integration-just-got-an-upgrade/" />
+    <meta name="twitter:image" content="/content/images/2021/11/Passbolt_browser-integration.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Julie Savary" />
+    <meta name="twitter:site" content="@ghost" />
+    <meta property="og:image:width" content="1600" />
+    <meta property="og:image:height" content="900" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Passbolt Blog",
+        "url": "/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/content/images/2021/11/Passbolt-white.svg"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Julie Savary",
+        "url": "/author/julie/",
+        "sameAs": []
+    },
+    "headline": "Passbolt browser integration just got an upgrade",
+    "url": "/passbolt-browser-integration-just-got-an-upgrade/",
+    "datePublished": "2021-11-12T11:04:39.000Z",
+    "dateModified": "2021-11-12T11:22:17.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "/content/images/2021/11/Passbolt_browser-integration.png",
+        "width": 1600,
+        "height": 900
+    },
+    "description": "Based on users feedback\n[https://community.passbolt.com/t/as-a-user-the-passbolt-extension-can-auto-fill-my-passwords-in-forms/82]\n, it was time for passbolt to upgrade some of the browser extension integration\nfeatures, primarily the auto-fill / auto-save functionalities.\n\n--------------------------------------------------------------------------------\n\nWhile browsing the internet, passbolt users aren’t always aware when credentials\nare known by passbolt, for a given web form. This is when you ",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Sitesauce" />
+    <link rel="alternate" type="application/rss+xml" title="Passbolt Blog" href="/rss/" />
+
+    <style amp-custom>
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        font-size: 62.5%;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    body {
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        color: #3a4145;
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+        font-size: 1.7rem;
+        line-height: 1.55em;
+        font-weight: 400;
+        font-style: normal;
+        background: #fff;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    p,
+    ul,
+    ol,
+    li,
+    dl,
+    dd,
+    hr,
+    pre,
+    form,
+    table,
+    video,
+    figure,
+    figcaption,
+    blockquote {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul[class],
+    ol[class] {
+        padding: 0;
+        list-style: none;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+    input,
+    button,
+    select,
+    textarea {
+        font: inherit;
+        -webkit-appearance: none;
+    }
+
+    fieldset {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    label {
+        display: block;
+        font-size: 0.9em;
+        font-weight: 700;
+    }
+
+    hr {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid currentcolor;
+        opacity: 0.1;
+    }
+
+    ::selection {
+        text-shadow: none;
+        background: #cbeafb;
+    }
+
+    mark {
+        background-color: #fdffb6;
+    }
+
+    small {
+        font-size: 80%;
+    }
+
+    sub,
+    sup {
+        position: relative;
+        font-size: 75%;
+        line-height: 0;
+        vertical-align: baseline;
+    }
+    sup {
+        top: -0.5em;
+    }
+    sub {
+        bottom: -0.25em;
+    }
+
+    ul li + li {
+        margin-top: 0.6em;
+    }
+
+    a {
+        color: var(--ghost-accent-color, #1292EE);
+        text-decoration-skip-ink: auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        font-weight: 700;
+        color: #121212;
+        line-height: 1.4em;
+    }
+
+    h1 {
+        font-size: 3.4rem;
+        line-height: 1.1em;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+        line-height: 1.2em;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    h4 {
+        font-size: 1.7rem;
+    }
+
+    h5 {
+        font-size: 1.6rem;
+    }
+
+    h6 {
+        font-size: 1.6rem;
+    }
+
+    amp-img {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    amp-img img {
+        object-fit: cover;
+    }
+
+    .page-header {
+        padding: 50px 5vmin 30px;
+        text-align: center;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .page-header a {
+        color: #121212;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1.6rem;
+        letter-spacing: -0.1px;
+    }
+
+    .post {
+        max-width: 680px;
+        margin: 0 auto;
+    }
+
+    .post-header {
+        margin: 0 5vmin 5vmin;
+        text-align: center;
+    }
+
+    .post-meta {
+        margin: 1rem 0 0 0;
+        text-transform: uppercase;
+        color: #738a94;
+        font-weight: 500;
+        font-size: 1.3rem;
+    }
+
+    .post-image {
+        margin: 0 0 5vmin;
+    }
+
+    .post-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .post-content {
+        padding: 0 5vmin;
+    }
+
+    .post-content > * + * {
+        margin-top: 1.5em;
+    }
+
+    .post-content [id]:not(:first-child) {
+        margin: 2em 0 0;
+    }
+
+    .post-content > [id] + * {
+        margin-top: 1rem;
+    }
+
+    .post-content [id] + .kg-card,
+    .post-content blockquote + .kg-card {
+        margin-top: 40px;
+    }
+
+    .post-content > ul,
+    .post-content > ol,
+    .post-content > dl {
+        padding-left: 1.9em;
+    }
+
+    .post-content hr {
+        margin-top: 40px;
+    }
+
+    .post .post-content hr + * {
+        margin-top: 40px;
+    }
+
+    .post-content amp-img {
+        background-color: #f8f8f8;
+    }
+
+    .post-content blockquote {
+        position: relative;
+        font-style: italic;
+    }
+
+    .post-content blockquote::before {
+        content: "";
+        position: absolute;
+        left: -1.5em;
+        top: 0;
+        bottom: 0;
+        width: 0.3rem;
+        background: var(--ghost-accent-color, #1292EE);
+    }
+
+    .post-content :not(.kg-card):not([id]) + .kg-card {
+        margin-top: 40px;
+    }
+
+    .post-content .kg-card + :not(.kg-card) {
+        margin-top: 40px;
+    }
+
+    .kg-card figcaption {
+        padding: 1.5rem 1.5rem 0;
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.3rem;
+        line-height: 1.4em;
+        opacity: 0.6;
+    }
+
+    .kg-card figcaption strong {
+        color: rgba(0,0,0,0.8);
+    }
+
+    .post-content :not(pre) code {
+        vertical-align: middle;
+        padding: 0.15em 0.4em 0.15em;
+        border: #e1eaef 1px solid;
+        font-weight: 400;
+        font-size: 0.9em;
+        line-height: 1em;
+        color: #15171a;
+        background: #f0f6f9;
+        border-radius: 0.25em;
+    }
+
+    .post-content > pre {
+        overflow: scroll;
+        padding: 16px 20px;
+        color: #fff;
+        background: #1F2428;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px -2px rgba(0,0,0,.1), 0 0 1px rgba(0,0,0,.4);
+    }
+
+    .kg-embed-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .kg-image-card img {
+        margin: auto;
+    }
+
+    .kg-gallery-card + .kg-gallery-card {
+        margin-top: 0.75em;
+    }
+
+    .kg-gallery-container {
+        position: relative;
+    }
+
+    .kg-gallery-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .kg-gallery-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .kg-gallery-row:not(:first-of-type) {
+        margin: 0.75em 0 0 0;
+    }
+
+    .kg-gallery-image:not(:first-of-type) {
+        margin: 0 0 0 0.75em;
+    }
+
+    .kg-bookmark-card,
+    .kg-bookmark-publisher {
+        position: relative;
+    }
+
+    .kg-bookmark-container,
+    .kg-bookmark-container:hover {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        color: currentColor;
+        background: rgba(255,255,255,0.6);
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+    }
+
+    .kg-bookmark-content {
+        flex-basis: 0;
+        flex-grow: 999;
+        padding: 20px;
+        order: 1;
+    }
+
+    .kg-bookmark-title {
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 1.3em;
+    }
+
+    .kg-bookmark-description {
+        display: -webkit-box;
+        max-height: 45px;
+        margin: 0.5em 0 0 0;
+        font-size: 1.4rem;
+        line-height: 1.55em;
+        overflow: hidden;
+        opacity: 0.8;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .kg-bookmark-metadata {
+        margin-top: 20px;
+    }
+
+    .kg-bookmark-metadata {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 1.3rem;
+        line-height: 1.3em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .kg-bookmark-description {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+
+    .kg-bookmark-metadata amp-img {
+        width: 18px;
+        height: 18px;
+        max-width: 18px;
+        max-height: 18px;
+        margin-right: 10px;
+    }
+
+    .kg-bookmark-thumbnail {
+        display: flex;
+        flex-basis: 20rem;
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+
+    .kg-bookmark-thumbnail amp-img {
+        max-height: 200px;
+    }
+
+    .kg-bookmark-author {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .kg-bookmark-publisher::before {
+        content: "•";
+        margin: 0 .5em;
+    }
+
+    .kg-width-full.kg-card-hascaption {
+        display: grid;
+        grid-template-columns: inherit;
+    }
+
+    .post-content table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .post-content th {
+        padding: 0.5em 0.8em;
+        text-align: left;
+        font-size: .75em;
+        text-transform: uppercase;
+    }
+
+    .post-content td {
+        padding: 0.4em 0.7em;
+    }
+
+    .post-content tbody tr:nth-child(2n + 1) {
+        background-color: rgba(0,0,0,0.1);
+        padding: 1px;
+    }
+
+    .post-content tbody tr:nth-child(2n + 2) td:last-child {
+        box-shadow:
+            inset 1px 0 rgba(0,0,0,0.1),
+            inset -1px 0 rgba(0,0,0,0.1);
+    }
+
+    .post-content tbody tr:nth-child(2n + 2) td {
+        box-shadow: inset 1px 0 rgba(0,0,0,0.1);
+    }
+
+    .post-content tbody tr:last-child {
+        border-bottom: 1px solid rgba(0,0,0,.1);
+    }
+
+    .page-footer {
+        padding: 60px 5vmin;
+        margin: 60px auto 0;
+        text-align: center;
+        background-color: #f8f8f8;
+    }
+
+    .page-footer h3 {
+        margin: 0.5rem 0 0 0;
+    }
+
+    .page-footer p {
+        max-width: 500px;
+        margin: 1rem auto 1.5rem;
+        font-size: 1.7rem;
+        line-height: 1.5em;
+        color: rgba(0,0,0,0.6)
+    }
+
+    .powered {
+        display: inline-flex;
+        align-items: center;
+        margin: 30px 0 0;
+        padding: 6px 9px 6px 6px;
+        border: rgba(0,0,0,0.1) 1px solid;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: -0.2px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        font-weight: 500;
+        color: #222;
+        text-decoration: none;
+        background: #fff;
+        border-radius: 6px;
+    }
+
+    .powered svg {
+        height: 16px;
+        width: 16px;
+        margin: 0 6px 0 0;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            font-size: 1.6rem;
+        }
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+        }
+    }
+
+    @media (max-width: 400px) {
+        h1 {
+            font-size: 2.6rem;
+            line-height: 1.15em;
+        }
+        h2 {
+            font-size: 2rem;
+            line-height: 1.2em;
+        }
+        h3 {
+            font-size: 1.7rem;
+        }
+    }
+
+    :root {--ghost-accent-color: #000000;}
+    </style>
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+
+</head>
+
+<body class="amp-template">
+    <header class="page-header">
+        <a href="">
+                <amp-img class="site-icon" src="/content/images/2021/11/Chrome-Webstore---128-x-128.png" width="50" height="50" layout="fixed"></amp-img>
+        </a>
+    </header>
+
+    <main class="content" role="main">
+        <article class="post">
+
+            <header class="post-header">
+                <h1 class="post-title">Passbolt browser integration just got an upgrade</h1>
+                <section class="post-meta">
+                    Julie Savary -
+                    <time class="post-date" datetime="2021-11-12">12 Nov 2021</time>
+                </section>
+            </header>
+            <figure class="post-image">
+                <amp-img src="/content/images/2021/11/Passbolt_browser-integration.png" width="600" height="340" layout="responsive"></amp-img>
+            </figure>
+            <section class="post-content">
+
+                <h3 id="based-on-users-feedback-it-was-time-for-passbolt-to-upgrade-some-of-the-browser-extension-integration-features-primarily-the-auto-fill-auto-save-functionalities">Based on <a href="https://community.passbolt.com/t/as-a-user-the-passbolt-extension-can-auto-fill-my-passwords-in-forms/82" rel="noopener ugc nofollow">users feedback</a>, it was time for passbolt to upgrade some of the browser extension integration features, primarily the auto-fill / auto-save functionalities.</h3><hr></hr><p>While browsing the internet, passbolt users aren’t always aware when credentials are known by passbolt, for a given web form. This is when you need to click on the passbolt icon in the browser toolbar to check manually.</p><p>That’s why the much awaited in-form integration has arrived. You’ll be able to perform actions faster within web forms, and be able to quickly generate passwords and save resources.</p><p>Check out below how it works, as well as the variety of other improvements we have brought to the browser extension.</p><h2 id="in-form-integration">In-form integration</h2><p>The new in-form integration will change the way you use passbolt daily. You’ll be able to auto-fill forms with suggested credentials, and generate new and randomised passwords based on the data you fill in.</p><h3 id="auto-fill-a-form-with-suggested-credentials">Auto-fill a form with suggested credentials</h3><p>When you’re filling in an online form, and already have credentials saved in passbolt for that URL, a suggestion will appear in the field you’re ready to type in.</p><p>When you click on the field, an icon will show up on the right side that will allow you to auto-fill your username and password into the fields required.</p><figure class="kg-card kg-image-card kg-card-hascaption"><amp-img src="https://miro.medium.com/max/60/0*6HdhuGiOmDhzxVCu?q=20" class="kg-image" alt width="707" height="660" layout="responsive"></amp-img><figcaption>Fig. auto-fill credentials with in-form integration</figcaption></figure><p><br />Generate a new randomised password without leaving your form</p><p>Easily generate new randomised passwords when signing up in new URLs. To do this, click on the “Generate a password securely” from the in-form integration.</p><h3 id="save-typed-credentials-in-just-a-click">Save typed credentials in just a click</h3><p>New sign up, requiring a new username and password? Not a problem. You can now save new credentials automatically using the in-form integration.</p><p>After using the “Generate a password securely” functionality, your passbolt browser extension will detect that a form has been filled in and offer for you to save it automatically.<br /></p><figure class="kg-card kg-image-card kg-card-hascaption"><amp-img src="https://miro.medium.com/max/700/0*HmgbZ9Sa4xfWXKBO" class="kg-image" alt width="1389" height="859" layout="responsive"></amp-img><figcaption>Fig. generating a new randomised password directly from a form, and saving automatically</figcaption></figure><h2 id="bigger-and-better-quick-access">Bigger and better quick access</h2><p>You’ll notice that the size of the quick access has been increased for improved visual comfort.</p><figure class="kg-card kg-image-card"><amp-img src="https://miro.medium.com/max/700/1*JR-7lPdaHjmGQmD9OF_COw.png" class="kg-image" alt width="700" height="487" layout="responsive"></amp-img></figure><h2 id="other-improvements">Other improvements</h2><p>The browser extension icon itself will change colour depending on your connection status — it will be grey when you aren’t logged in and then turn red when you are. This visual clue will make it easier for you to see when you are or aren’t logged in with your browser extension.</p><figure class="kg-card kg-image-card"><amp-img src="/content/images/2021/11/Passbolt_icons.png" class="kg-image" alt width="700" height="233" srcset="/content/images/size/w600/2021/11/Passbolt_icons.png 600w, /content/images/2021/11/Passbolt_icons.png 700w" layout="responsive"></amp-img></figure><p>There will also be a visual clue when the extension has matching credentials for a form that’s displayed on the current page when you’re logged in to your passbolt account.</p><figure class="kg-card kg-image-card kg-card-hascaption"><amp-img src="/content/images/2021/11/Passbolt_password-generator.png" class="kg-image" alt width="360" height="575" layout="responsive"></amp-img><figcaption>Fig. password generator in quick access</figcaption></figure><h3 id="quick-access-improvements">Quick access improvements</h3><p>Items will be directly clickable in the suggestions list displayed in your browser extension. You won’t need to go to a different section and click “use on this page” anymore.</p><p>Also, the password generator will now be available directly from the browser extension quick access when you’re creating a credential and want to change the generation parameters (characters, length, etc..).</p><h1 id="your-valuable-feedback">Your valuable feedback</h1><p>Your opinion matters. The browser extension improvements are based on the feedback we received from our community. Let us know what you think about the latest release v3.3 and these improvements <a href="https://community.passbolt.com/t/new-release-v3-3-0-senior-elfo/4405" rel="noopener ugc nofollow">in the community forum</a>.</p><figure class="kg-card kg-image-card"><amp-img src="/content/images/2021/11/Passbolt_feedback-CTA.png" class="kg-image" alt width="700" height="115" srcset="/content/images/size/w600/2021/11/Passbolt_feedback-CTA.png 600w, /content/images/2021/11/Passbolt_feedback-CTA.png 700w" layout="responsive"></amp-img></figure>
+
+            </section>
+
+        </article>
+    </main>
+    <footer class="page-footer">
+            <amp-img class="site-icon" src="/content/images/2021/11/Chrome-Webstore---128-x-128.png" width="50" height="50" layout="fixed"></amp-img>
+        <h3>Passbolt Blog</h3>
+            <p>Passbolt Blog - Get the latest product updates, password management news, and security information</p>
+        <p><a href="">Read more posts →</a></p>
+        <a class="powered" href="https://ghost.org" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 156 156"><g fill="none" fill-rule="evenodd"><rect fill="#15212B" width="156" height="156" rx="27"/><g transform="translate(36 36)" fill="#F6F8FA"><path d="M0 71.007A4.004 4.004 0 014 67h26a4 4 0 014 4.007v8.986A4.004 4.004 0 0130 84H4a4 4 0 01-4-4.007v-8.986zM50 71.007A4.004 4.004 0 0154 67h26a4 4 0 014 4.007v8.986A4.004 4.004 0 0180 84H54a4 4 0 01-4-4.007v-8.986z"/><rect y="34" width="84" height="17" rx="4"/><path d="M0 4.007A4.007 4.007 0 014.007 0h41.986A4.003 4.003 0 0150 4.007v8.986A4.007 4.007 0 0145.993 17H4.007A4.003 4.003 0 010 12.993V4.007z"/><rect x="67" width="17" height="17" rx="4"/></g></g></svg> Published with Ghost</a>
+    </footer>
+    
+</body>
+</html>

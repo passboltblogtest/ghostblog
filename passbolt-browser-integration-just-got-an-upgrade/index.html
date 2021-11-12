@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Passbolt browser integration just got an upgrade</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+
+    <link rel="stylesheet" href="/assets/built/screen.css?v=055dbea058">
+
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="canonical" href="/passbolt-browser-integration-just-got-an-upgrade/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="/passbolt-browser-integration-just-got-an-upgrade/amp/" />
+    
+    <meta property="og:site_name" content="Passbolt Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Passbolt browser integration just got an upgrade" />
+    <meta property="og:description" content="Based on users feedback, it was time for passbolt to upgrade some of the browser extension integration features, primarily the auto-fill / auto-save functionalities.While browsing the internet, passbolt users aren’t always aware when credentials are known by passbolt, for a given web form. This is when you need to" />
+    <meta property="og:url" content="/passbolt-browser-integration-just-got-an-upgrade/" />
+    <meta property="og:image" content="/content/images/2021/11/Passbolt_browser-integration.png" />
+    <meta property="article:published_time" content="2021-11-12T11:04:39.000Z" />
+    <meta property="article:modified_time" content="2021-11-12T11:08:51.000Z" />
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Passbolt browser integration just got an upgrade" />
+    <meta name="twitter:description" content="Based on users feedback, it was time for passbolt to upgrade some of the browser extension integration features, primarily the auto-fill / auto-save functionalities.While browsing the internet, passbolt users aren’t always aware when credentials are known by passbolt, for a given web form. This is when you need to" />
+    <meta name="twitter:url" content="/passbolt-browser-integration-just-got-an-upgrade/" />
+    <meta name="twitter:image" content="/content/images/2021/11/Passbolt_browser-integration.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Julie Savary" />
+    <meta name="twitter:site" content="@ghost" />
+    <meta property="og:image:width" content="1600" />
+    <meta property="og:image:height" content="900" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Passbolt Blog",
+        "url": "/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/content/images/2021/11/Passbolt-white.svg"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Julie Savary",
+        "url": "/author/julie/",
+        "sameAs": []
+    },
+    "headline": "Passbolt browser integration just got an upgrade",
+    "url": "/passbolt-browser-integration-just-got-an-upgrade/",
+    "datePublished": "2021-11-12T11:04:39.000Z",
+    "dateModified": "2021-11-12T11:08:51.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "/content/images/2021/11/Passbolt_browser-integration.png",
+        "width": 1600,
+        "height": 900
+    },
+    "description": "Based on users feedback\n[https://community.passbolt.com/t/as-a-user-the-passbolt-extension-can-auto-fill-my-passwords-in-forms/82]\n, it was time for passbolt to upgrade some of the browser extension integration\nfeatures, primarily the auto-fill / auto-save functionalities.\n\n--------------------------------------------------------------------------------\n\nWhile browsing the internet, passbolt users aren’t always aware when credentials\nare known by passbolt, for a given web form. This is when you ",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Sitesauce" />
+    <link rel="alternate" type="application/rss+xml" title="Passbolt Blog" href="/rss/" />
+    <script defer src="https://unpkg.com/@tryghost/portal@~1.12.0/umd/portal.min.js" data-ghost="/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style><style>:root {--ghost-accent-color: #000000;}</style>
+</head>
+
+<body class="post-template with-alt-header">
+    <div class="site">
+        <header id="site-header" class="site-header">
+    <div class="header-inner">
+        <div class="header-brand">
+            <a class="logo" href="">
+                    <img class="logo-image" src="/content/images/2021/11/Passbolt-white.svg" alt="Passbolt Blog">
+            </a>
+
+            <div class="burger">
+                <div class="burger-bar"></div>
+                <div class="burger-bar"></div>
+            </div>
+        </div>
+
+        <nav class="header-nav">
+                        <a class="menu-item menu-item-home" href="/">Home</a>
+        <a class="menu-item menu-item-community-forum" href="https://community.passbolt.com/">Community Forum</a>
+        <a class="menu-item menu-item-need-help" href="https://community.passbolt.com/">Need help?</a>
+        <a class="menu-item menu-item-sign-up" href="https://www.passbolt.com/cloud/signup">Sign up</a>
+        <a class="menu-item menu-item-download" href="https://www.passbolt.com/ce">Download</a>
+
+        </nav>
+
+        <div class="header-actions">
+            <div class="social">
+                    <a class="social-item social-item-facebook"
+                        href="https://www.facebook.com/ghost" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook">
+                        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/></svg>                    </a>
+
+                    <a class="social-item social-item-twitter"
+                        href="https://twitter.com/ghost" target="_blank"
+                        rel="noopener noreferrer" aria-label="Twitter">
+                        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>                    </a>
+            </div>
+
+                <button class="button-text menu-item members-login" data-portal="signin">Login</button>
+        </div>
+    </div>
+</header>
+
+        <div class="site-content">
+            
+<div class="content-area">
+    <main class="site-main">
+            <article class="single post">
+    <header class="single-header kg-canvas">
+            <div class="single-meta">
+                <span class="single-meta-item single-meta-date">
+                    <time datetime="2021-11-12">
+                        Nov 12, 2021
+                    </time>
+                </span>
+
+                <span class="single-meta-item single-meta-length">
+                    3 min read
+                </span>
+
+            </div>
+
+        <h1 class="single-title">Passbolt browser integration just got an upgrade</h1>
+
+
+                <figure class="single-media kg-width-wide">
+                    <img srcset="/content/images/size/w400/2021/11/Passbolt_browser-integration.png 400w,
+/content/images/size/w750/2021/11/Passbolt_browser-integration.png 750w,
+/content/images/size/w960/2021/11/Passbolt_browser-integration.png 960w,
+/content/images/size/w1140/2021/11/Passbolt_browser-integration.png 1140w" sizes="(min-width: 1023px) 920px, calc(90vw)" src="/content/images/size/w960/2021/11/Passbolt_browser-integration.png" alt="Passbolt browser integration just got an upgrade">
+                </figure>
+    </header>
+
+    <div class="single-content kg-canvas u-text-format">
+        <h3 id="based-on-users-feedback-it-was-time-for-passbolt-to-upgrade-some-of-the-browser-extension-integration-features-primarily-the-auto-fill-auto-save-functionalities">Based on <a href="https://community.passbolt.com/t/as-a-user-the-passbolt-extension-can-auto-fill-my-passwords-in-forms/82" rel="noopener ugc nofollow">users feedback</a>, it was time for passbolt to upgrade some of the browser extension integration features, primarily the auto-fill / auto-save functionalities.</h3><hr><p>While browsing the internet, passbolt users aren’t always aware when credentials are known by passbolt, for a given web form. This is when you need to click on the passbolt icon in the browser toolbar to check manually.</p><p>That’s why the much awaited in-form integration has arrived. You’ll be able to perform actions faster within web forms, and be able to quickly generate passwords and save resources.</p><p>Check out below how it works, as well as the variety of other improvements we have brought to the browser extension.</p><h2 id="in-form-integration">In-form integration</h2><p>The new in-form integration will change the way you use passbolt daily. You’ll be able to auto-fill forms with suggested credentials, and generate new and randomised passwords based on the data you fill in.</p><h3 id="auto-fill-a-form-with-suggested-credentials">Auto-fill a form with suggested credentials</h3><p>When you’re filling in an online form, and already have credentials saved in passbolt for that URL, a suggestion will appear in the field you’re ready to type in.</p><p>When you click on the field, an icon will show up on the right side that will allow you to auto-fill your username and password into the fields required.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://miro.medium.com/max/60/0*6HdhuGiOmDhzxVCu?q=20" class="kg-image" alt loading="lazy"><figcaption>Fig. auto-fill credentials with in-form integration</figcaption></figure><p><br>Generate a new randomised password without leaving your form</p><p>Easily generate new randomised passwords when signing up in new URLs. To do this, click on the “Generate a password securely” from the in-form integration.</p><h3 id="save-typed-credentials-in-just-a-click">Save typed credentials in just a click</h3><p>New sign up, requiring a new username and password? Not a problem. You can now save new credentials automatically using the in-form integration.</p><p>After using the “Generate a password securely” functionality, your passbolt browser extension will detect that a form has been filled in and offer for you to save it automatically.<br></p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://miro.medium.com/max/700/0*HmgbZ9Sa4xfWXKBO" class="kg-image" alt loading="lazy"><figcaption>Fig. generating a new randomised password directly from a form, and saving automatically</figcaption></figure><h2 id="bigger-and-better-quick-access">Bigger and better quick access</h2><p>You’ll notice that the size of the quick access has been increased for improved visual comfort.</p><figure class="kg-card kg-image-card"><img src="https://miro.medium.com/max/700/1*JR-7lPdaHjmGQmD9OF_COw.png" class="kg-image" alt loading="lazy"></figure><h2 id="other-improvements">Other improvements</h2><p>The browser extension icon itself will change colour depending on your connection status — it will be grey when you aren’t logged in and then turn red when you are. This visual clue will make it easier for you to see when you are or aren’t logged in with your browser extension.</p><figure class="kg-card kg-image-card"><img src="/content/images/2021/11/Passbolt_icons.png" class="kg-image" alt loading="lazy" width="700" height="233" srcset="/content/images/size/w600/2021/11/Passbolt_icons.png 600w, /content/images/2021/11/Passbolt_icons.png 700w"></figure><p>There will also be a visual clue when the extension has matching credentials for a form that’s displayed on the current page when you’re logged in to your passbolt account.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="/content/images/2021/11/Passbolt_password-generator.png" class="kg-image" alt loading="lazy" width="360" height="575"><figcaption>Fig. password generator in quick access</figcaption></figure><h3 id="quick-access-improvements">Quick access improvements</h3><p>Items will be directly clickable in the suggestions list displayed in your browser extension. You won’t need to go to a different section and click “use on this page” anymore.</p><p>Also, the password generator will now be available directly from the browser extension quick access when you’re creating a credential and want to change the generation parameters (characters, length, etc..).</p><h1 id="your-valuable-feedback">Your valuable feedback</h1><p>Your opinion matters. The browser extension improvements are based on the feedback we received from our community. Let us know what you think about the latest release v3.3 and these improvements <a href="https://community.passbolt.com/t/new-release-v3-3-0-senior-elfo/4405" rel="noopener ugc nofollow">in the community forum</a>.</p><figure class="kg-card kg-image-card"><img src="/content/images/2021/11/Passbolt_feedback-CTA.png" class="kg-image" alt loading="lazy" width="700" height="115" srcset="/content/images/size/w600/2021/11/Passbolt_feedback-CTA.png 600w, /content/images/2021/11/Passbolt_feedback-CTA.png 700w"></figure>
+    </div>
+
+        <footer class="single-footer container small">
+            <div class="single-footer-left">
+                    <div class="navigation navigation-previous">
+                        <a class="navigation-link" href="/welcome/" aria-label="Previous post">
+                            <span class="navigation-icon"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <path d="M26.667 14.667v2.667h-16L18 24.667l-1.893 1.893L5.547 16l10.56-10.56L18 7.333l-7.333 7.333h16z"></path>
+</svg></span>
+                        </a>
+                    </div>
+            </div>
+
+            <div class="single-footer-middle">
+                    <div class="single-footer-top">
+                        <h3 class="single-footer-title">Published by:</h3>
+                        <div class="author-list">
+                                <div class="author-image-placeholder u-placeholder square">
+                                    <a href="/author/julie/" title="Julie Savary">
+                                            <span class="u-object-fit"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</span>
+                                    </a>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="single-footer-bottom">
+                        <div class="share">
+                            <a class="share-link share-link-facebook"
+                                href="https://www.facebook.com/sharer.php?u=/passbolt-browser-integration-just-got-an-upgrade/"
+                                target="_blank" rel="noopener noreferrer">
+                                <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/></svg>                                Share
+                            </a>
+                            <a class="share-link share-link-twitter"
+                                href="https://twitter.com/intent/tweet?url=/passbolt-browser-integration-just-got-an-upgrade/&text=Passbolt%20browser%20integration%20just%20got%20an%20upgrade"
+                                target="_blank" rel="noopener noreferrer">
+                                <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>                                Tweet
+                            </a>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="single-footer-right">
+            </div>
+        </footer>
+</article>                                </main>
+</div>
+
+
+        </div>
+
+        <footer class="site-footer container">
+    <div class="footer-inner">
+        <div class="footer-left">
+            <div class="copyright">
+                Passbolt Blog © 2021
+            </div>
+        </div>
+
+        <nav class="footer-nav">
+                    <a class="menu-item menu-item-data-privacy" href="/privacy/">Data &amp; privacy</a>
+        <span class="sep">•</span>
+        <a class="menu-item menu-item-contact" href="/contact/">Contact</a>
+        <span class="sep">•</span>
+        <a class="menu-item menu-item-contribute" href="/contribute/">Contribute →</a>
+        <span class="sep">•</span>
+
+            <a class="menu-item badge" href="https://ghost.org/" target="_blank" rel="noopener noreferrer">Published with Ghost</a>
+        </nav>
+
+        <div class="footer-right">
+            <div class="social">
+                    <a class="social-item social-item-facebook"
+                        href="https://www.facebook.com/ghost" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook">
+                        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"/></svg>                    </a>
+
+                    <a class="social-item social-item-twitter"
+                        href="https://twitter.com/ghost" target="_blank"
+                        rel="noopener noreferrer" aria-label="Twitter">
+                        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>                    </a>
+            </div>
+        </div>
+    </div>
+</footer>        <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe.
+        It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides.
+          PhotoSwipe keeps only 3 of them in the DOM to save memory.
+          Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>    </div>
+
+    <script>
+        if (document.body.classList.contains('with-full-cover') && (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.platform))) {
+            document.getElementsByClassName('cover')[0].style.height = window.innerHeight + 'px';
+        }
+    </script>
+
+    <script src="/assets/built/main.min.js?v=055dbea058"></script>
+
+    
+</body>
+
+</html>
